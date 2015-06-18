@@ -7,7 +7,10 @@ script: ./travis-build.sh
 env:
   global:
   - GIT_NAME="Graeme Rocher"
-  - GIT_EMAIL="graeme.rocher@gmail.com"  
-  - secure: BcvI6uMqd0kcjMknkcDYunESyYC3LWvO/QDgEXCv4HNCiZ/NO/9em4qNcB1F0pR2cGjIdyPMZS3MkFsHDNEU8VqmEIMSwoMys5cfu70wAIIk7hsvHJyc7SbGEHj7Mn+Z++guKCcLjjv+mZmB3R/2mMIHm41QlLIln75mLrbrwIg=
-  - secure: GscDMD/9TgJeP67CS89Hj486m33Dsrt+Uwk8ruylTwdUtmPnOWz04NegejKa64jJaLQm2w/FbqXQLL1V9Cp4MDeeo6GLG6PrecXiCmJ6AYnSFB3rXYSLru1mrXPqgz9F9yXA7dhVurnEdnb7RsiPYtKo32v4IBLCRzIA93wmcBk=
+  - GIT_EMAIL="graeme.rocher@gmail.com"
   - secure: kBeaNzEuThDWeynwh4kVvdjRu9KffayX6BEsBJCH1VTnLG2/8MBylM22fUD81cz/wDATgbHBony1tD//guiJkNNZo98SEVP5ucvlwiBucE1+wMYlcE7b099KPvdKj78HhRwCfSeurJO6BKxgD4LEyr4dU7mYPHqBupZHsCSekJo=
+  - secure: XxmQ9KnGspnAHiac6UVvlxL5RbM1b1Cw6PCyjrYv1vlp1wOt1UVWbR4ABoQrs2TDl+BLs4/RTecEDQI02h02LtHjKwDrap+lJNs3bjwEW6rd/V9GJ1BHckwfHmbpn6gnwGoOm74rmPG9HdG+A+ytDmZQr/YdCuSrcQAfkZZKCFw=
+  - secure: m6fC8U26sJnaryx4lyfapwRsviSDqRinppuVa82Fmxd4X2NC1SFdb3Y2d0O1BteArdx4YFhLv3t5PC6T3K+DqD/Ab9Iy4FJnJS9y2YJx4YhT3i8Bi/pRqWmtsvwtzG7g9iHuCsLNrgXAxaiKMBUyS0uWB2ZJDYKQydVv6f2ePMk=
+  - secure: OUdTVWoEGz4F41asmOO8KQC8ZiSHZkUPdTxnP9Sud3Ylk/UycGITOXhReCnXqpkmh3l4tZT6G2asLrhBg2mrY6YMXZEpvFCGxC96YZU6SjNwMmvcTD+6odialS9GlwvWS+QFt/dcjmFo3X6C6ro6+tmZg1l4Rg8u+Egw0GihOjQ=
+  - secure: kG0kLymJ1zMqBoFwVb/sx7/mpnJMPmU5ODtfsC4MLhfdE/Fh3ToVWdRz05c+bI94pOCkFPbU/G4D8WzgZUHj1+Xn7ibciY98oXXlmpE2cQpPoehTjH1dxLeMal18QbI61qezlpeY0SP0JNH5iqGmjKP9QuwFF4MCNY+vXN3Xpfs=
+  - secure: Bi/VD2joJerJc0KLmGfcXlYykQLC+sJ7HkVBbY7AS+JmTCf/jEbQgK5CHw0GyJ5rQbvEhUzQJqD5eGeUkEWlGVhsRFUaNOa/lgf4zPVQdtYtdg/QTekiUvNGtLTI1k1V88vl3KjzwmWfulWgp/tWyzlaTdVbBrwICheJlKiQq1M=
