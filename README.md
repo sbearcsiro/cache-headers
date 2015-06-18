@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/grails-plugins/grails-cache-headers.svg)](https://travis-ci.org/grails-plugins/grails-cache-headers)
+[![Build Status](https://travis-ci.org/grails-plugins/cache-headers.svg)](https://travis-ci.org/grails-plugins/cache-headers)
 
 Grails Cache Headers Plugin
 ====================
