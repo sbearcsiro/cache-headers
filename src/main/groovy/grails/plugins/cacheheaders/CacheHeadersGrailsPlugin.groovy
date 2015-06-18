@@ -6,6 +6,7 @@ import groovy.transform.*
 import grails.core.*
 
 @Commons
+@CompileStatic
 class CacheHeadersGrailsPlugin extends Plugin {
 	def grailsVersion = "3.0 > *"
 	def observe = ['controllers']
@@ -25,21 +26,22 @@ class CacheHeadersGrailsPlugin extends Plugin {
 
 
 	void doWithApplicationContext() {
-		reloadConfig(grailsApplication, applicationContext.cacheHeadersService)
+		CacheHeadersService cacheHeadersService = applicationContext.getBean('cacheHeadersService', CacheHeadersService)
+		cacheHeadersService.enabled = config.getProperty('cache.headers.enabled', Boolean, true)
+		cacheHeadersService.presets = getPresets(config)
+		log.info "Caching enabled in Config: ${cacheHeadersService.enabled}"
+		log.debug "Caching presets declared: ${cacheHeadersService.presets}"
 	}
 
+	@CompileDynamic
+	Map getPresets(config) {
+		config.cache.headers.presets
+	}
+	
 	void onConfigChange(Map<String, Object> event) {
 		// Config change might mean that the caching has been turned on/off
-		reloadConfig(event.application, event.application.mainContext.cacheHeadersService)
+		doWithApplicationContext()
 	}
 
-	private void reloadConfig(application, svc) {
-		def conf = application.config.cache.headers
-		def cacheSetting = conf.enabled
-		svc.enabled = ((cacheSetting instanceof String) || (cacheSetting instanceof Boolean)) ? Boolean.valueOf(cacheSetting.toString()) : true
-		svc.presets = conf.presets
-		log.info "Caching enabled in Config: ${svc.enabled}"
-		log.debug "Caching presets declared: ${svc.presets}"
-	}
 
 }
