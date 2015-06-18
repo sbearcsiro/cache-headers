@@ -1,6 +1,7 @@
-package com.grailsrocks.cacheheaders
+package grails.plugins.cacheheaders
 
 import java.text.SimpleDateFormat
+import javax.servlet.http.*
 
 class CacheHeadersService {
 

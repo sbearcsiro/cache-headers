@@ -1,5 +1,7 @@
 *.log
 /target
+/build
+/.gradle
 grails-cache-headers-*.zip
 grails-cache-headers-*.zip.sha1
 plugin.xml

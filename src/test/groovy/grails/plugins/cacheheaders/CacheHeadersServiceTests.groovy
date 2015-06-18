@@ -1,6 +1,5 @@
-package com.grailsrocks.cacheheaders
+package grails.plugins.cacheheaders
 
-import grails.test.GrailsUnitTestCase
 
 import java.text.SimpleDateFormat
 

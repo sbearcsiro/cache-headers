@@ -1,6 +1,8 @@
 package com.grailsrocks.cacheheaders
 
-class TestController {
+import grails.plugins.cacheheaders.*
+
+class TestController implements CacheHeadersTrait {
 
 	def presetTest1() {
 		cache "presetDeny"

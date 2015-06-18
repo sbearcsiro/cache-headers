@@ -8,13 +8,25 @@ import grails.test.mixin.*
 import org.junit.*
 import test.*
 import static org.junit.Assert.*
+import grails.util.*
+import org.springframework.beans.factory.annotation.*
+import grails.plugins.cacheheaders.*
 
 @TestMixin(IntegrationTestMixin)
 class CacheMethodsTests {
 
 	private static final String RFC1123_DATE_FORMAT = "EEE, dd MMM yyyy HH:mm:ss zzz" // Always GMT
 
+
 	private TestController con = new TestController()
+
+	@Autowired
+	CacheHeadersService cacheHeadersService
+
+	void setUp() {
+		GrailsWebMockUtil.bindMockWebRequest()
+		con.cacheHeadersService = cacheHeadersService 
+	}
 
 	void testPresetCanTurnCachingOff() {
 		grails.util.Holders.config.cache.headers.presets.presetDeny = false
