@@ -72,5 +72,5 @@ task wrapper(type: Wrapper) {
 }
 
 jar {
-  exclude "*TetsController**"
+  exclude "*TestController**"
 }
